@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archana P | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "Lato", sans-serif; line-height: 1.6; color: #111; background: #fff; scroll-behavior: smooth; }
+
+    /* Navbar */
+    header { position: sticky; top: 0; z-index: 100; }
+    .navbar {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem; background: #2B7A78; color: #fff;
+    }
+    .navbar .logo { font-size: 1.5rem; font-weight: bold; color: #fff; text-decoration: none; }
+    .nav-links { list-style: none; display: flex; gap: 1rem; }
+    .nav-links li a {
+      color: #fff; text-decoration: none; padding: 0.5rem 1rem;
+      transition: background 0.3s;
+    }
+    .nav-links li a:hover,
+    .nav-links li a.active { background: #195E5C; border-radius: 5px; }
+    .menu-toggle { display: none; font-size: 1.5rem; background: none; border: none; color: #fff; }
+
+    /* Hero */
+    .hero {
+      display: flex; align-items: center; justify-content: center;
+      height: 90vh; text-align: center; background: #f5f5f5; padding: 2rem;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    .hero h2 { font-size: 1.5rem; margin-bottom: 1rem; color: #555; }
+    .hero .btn, .hero .btn-outline {
+      display: inline-block; padding: 0.75rem 1.5rem; margin: 0.5rem;
+      border-radius: 8px; text-decoration: none; font-weight: bold;
+    }
+    .hero .btn { background: #2B7A78; color: #fff; }
+    .hero .btn-outline { border: 2px solid #2B7A78; color: #2B7A78; }
+
+    /* Sections */
+    section { max-width: 900px; margin: 3rem auto; padding: 0 1rem; }
+    section h1 { margin-bottom: 1rem; font-size: 2rem; text-align: center; }
+    section p, li { margin-bottom: 1rem; color: #444; }
+
+    /* About with photo */
+    .about-container {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; justify-content: center;
+    }
+    .about-photo {
+      flex: 0 0 200px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .about-photo img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .about-text { flex: 1; min-width: 250px; }
+
+    /* Footer */
+    footer { text-align: center; padding: 1rem; background: #eee; margin-top: 2rem; font-size: 0.9rem; }
+
+    /* Fade-in effect */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .fade-in.appear { opacity: 1; transform: translateY(0); }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; flex-direction: column; background: #2B7A78;
+        position: absolute; top: 60px; right: 0; width: 200px; padding: 1rem;
+      }
+      .nav-links.show { display: flex; }
+      .menu-toggle { display: block; }
+      .about-container { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <a href="#home" class="logo">Archana P</a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#values">Values</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#presentations">Presentations</a></li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section id="home" class="hero fade-in">
+    <div class="hero-content">
+      <h1>Archana P</h1>
+      <h2>Aspiring IT Professional</h2>
+      <p>Problem solver passionate about software development, web technologies, and scalable systems.</p>
+      <div>
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="fade-in">
+    <h1>About Me</h1>
+    <div class="about-container">
+      <div class="about-photo">
+        <img src="C:\Users\achus\OneDrive\Desktop\images\archana.img.jpg" alt="Archana P">
+      </div>
+      <div class="about-text">
+        <p>I am Archana P, a B.Tech IT student at K. Ramakrishnan College of Engineering (2022–2026). I aim to start my career in the IT industry where I can utilize my technical knowledge and problem-solving abilities, while continuously learning and contributing to organizational growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section id="values" class="fade-in">
+    <h1>Values & Mission</h1>
+    <p><strong>Values:</strong> Continuous learning, collaboration, innovation, and responsibility.</p>
+    <p><strong>Mission:</strong> To contribute as a skilled developer building efficient, user-friendly applications while adapting to emerging technologies.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="fade-in">
+    <h1>Skills Highlights</h1>
+    <ul>
+      <li><strong>Languages:</strong> Java, C, C++, Python</li>
+      <li><strong>Web:</strong> HTML, CSS, JavaScript, Flexbox</li>
+      <li><strong>Database:</strong> MySQL</li>
+      <li><strong>Tools:</strong> Android Studio, Git, SkillRack, HackerRank</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="fade-in">
+    <h1>Project Samples</h1>
+    <p><strong>Medicine Reminder App:</strong> Android app to assist Alzheimer's patients with medication schedules. (Android Studio, MySQL)</p>
+    <p><strong>Online Course Registration:</strong> Web platform enabling students to browse and register for courses. (HTML, CSS, JavaScript)</p>
+    <p><strong>Memory Map Project:</strong> Platform to store and share memories associated with visited locations. (HTML, CSS, JavaScript)</p>
+    <p><strong>Online Defect Register System:</strong> Centralized system to capture and store defects. (HTML, CSS, JavaScript)</p>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="fade-in">
+    <h1>Certifications</h1>
+    <ul>
+      <li>Microsoft Certified: Azure Fundamentals (AZ-900), May 2025</li>
+      <li>NPTEL: Cloud Computing and Distributed Systems</li>
+      <li>GUVI: Python Programming, HCL Tech & Generative AI</li>
+    </ul>
+  </section>
+
+  <!-- Presentations -->
+  <section id="presentations" class="fade-in">
+    <h1>Presentation Experience</h1>
+    <p>Contributed to project presentations during internships and academic showcases, including “Online Defect Register System” and “Medicine Reminder App.”</p>
+  </section>
+
+  <!-- References -->
+  <section id="references" class="fade-in">
+    <h1>References</h1>
+    <blockquote>“Archana is a quick learner and a problem solver with strong skills in both web and app development.”</blockquote>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="fade-in">
+    <h1>Contact</h1>
+    <p>Email: <a href="mailto:archanapalanivel11@gmail.com">archanapalanivel11@gmail.com</a></p>
+    <p>Phone: +91 7604859968</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/p-archana-9390a4258" target="_blank">linkedin.com/in/p-archana-9390a4258</a></p>
+    <p>GitHub: <a href="http://github.com/achu1104" target="_blank">github.com/achu1104</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Archana P. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    }
+
+    // Fade-in animation
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => { appearOnScroll.observe(fader); });
+  </script>
+</body>
+</html>
